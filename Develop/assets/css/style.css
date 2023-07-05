@@ -1,13 +1,20 @@
+/*Universal Selector*/
+/*Box-sizing= Makes sure that the code does not exceed the box model no matter what parameters you enter the box content will shrink to fit the box
+rather than overflowing*/
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/*Type Selector*/
+/*Defines body elements background color*/
 body {
     background-color: #d9dcd6;
 }
 
+/*Class Selector*/
+/*defines the font-family and colors associated to it while giving the navigation section some padding*/
 .header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -15,15 +22,22 @@ body {
     color: #ffffff;
 }
 
+/*Child selector*/
+/* display: inline block determine that each box model will remain in a row or inline on the page*/
 .header h1 {
     display: inline-block;
     font-size: 48px;
 }
 
+/*Descendant selector*/
+/*Defines the color of SEO box model within Horiseon header*/
 .header h1 .seo {
     color: #d9dcd6;
 }
 
+/*Child Selector*/
+/*Addresses The hyperlinks in the navigation bar box model the "float: right" determines the positioning 
+of the links on the right while the padding provides some space above centering it and the margin pushes the box towards the left.*/
 .header div {
     padding-top: 15px;
     margin-right: 20px;
@@ -32,24 +46,31 @@ body {
     font-size: 20px;
 }
 
+/*Descendant selector*/ 
+/*list-style-type: defines that there will not be any bullet points*/
 .header div ul {
     list-style-type: none;
 }
 
+/*Descendant selector*/
+/*Display: inline-block = The content will be in a block (or box) inline on the page (or in a row)*/
+/*Margin-left: push the list items to the right*/
 .header div ul li {
     display: inline-block;
     margin-left: 25px;
 }
 
+/*Type Selector*/
+/*is targeting the hyperlinks themselves specifying the color and text-decoration (which is set to none basically stated
+that there will not be any under, over, and stike through lines appied. This selector also inherts the div elements font size and family since it
+is technically still nested within it even though it has its own open and closing tag*/
 a {
     color: #ffffff;
     text-decoration: none;
 }
-
-p {
-    font-size: 16px;
-}
-
+/*Class selector*/
+/*Main image on page set to 100% width extending the whole extent on page and centered on page with a background-cover set to cover which scales 
+the image to fit the container by shrinking it if neccessary*/
 .hero {
     height: 800px;
     width: 100%;
@@ -58,23 +79,55 @@ p {
     background-size: cover;
     background-position: center;
 }
-
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
+/*Class Selector*/
 .content {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
-
+/*Class selectors each being targeted by the css file*/
+.search-engine-optimization,
+.online-reputation-management,
+.social-media-marketing {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+/*The three classes above have been linked into one single css function rather than having multiple*/
+}
+/* Descendant selector each being targeted by the css file*/
+.search-engine-optimization img,
+.online-reputation-management img,
+.social-media-marketing img {
+    max-height: 200px;
+/*The three classes above have been linked into one single css function rather than having multiple*/
+}
+/*Child selectors each being targeted by the css file*/
+.search-engine-optimization h2,
+.online-reputation-management h2,
+.social-media-marketing h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+/*The three classes above have been linked into one single css function rather than having multiple*/
+}
+/*Class selector*/
+/*float element sets the class selector on either right or left side of page*/
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+/*Class selector*/
+.float-right {
+    float: right;
+    margin-left: 25px;
+}
+/*Type Selector*/
+p {
+    font-size: 16px;
+}
+/*Class selector*/
 .benefits {
     margin-right: 20px;
     padding: 20px;
@@ -85,7 +138,7 @@ p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
 }
-
+/*Class selectors each being targeted by CSS file*/
 .benefit-lead,
 .benefit-brand,
 .benefit-cost {
@@ -93,7 +146,7 @@ p {
     color: #ffffff;
     /*The three classes above have been linked into one single css function rather than having multiple*/
 }
-
+/*Child selectors each being targeted by CSS file*/
 .benefit-lead h3,
 .benefit-brand h3,
 .benefit-cost h3 {
@@ -101,50 +154,23 @@ p {
     text-align: center;
     /*The three classes above have been linked into one single css function rather than having multiple*/
 }
-
+/*Descendant selector*/
 .benefit-lead img,
 .benefit-brand img,
 .benefit-cost img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
-    /*The three classes above have been linked into one single css function rather than having multiple*/
+/*The three classes above have been linked into one single css function rather than having multiple*/
 }
-
-.search-engine-optimization,
-.online-reputation-management,
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-    /*The three classes above have been linked into one single css function rather than having multiple*/
-}
-
-.search-engine-optimization img,
-.online-reputation-management img,
-.social-media-marketing img {
-    max-height: 200px;
-    /*The three classes above have been linked into one single css function rather than having multiple*/
-}
-
-.search-engine-optimization h2,
-.online-reputation-management h2,
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-    /*The three classes above have been linked into one single css function rather than having multiple*/
-}
-
+/*Class Selector*/
 .footer {
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
-
+/*Child Selector*/
 .footer h4 {
     font-size: 20px;
 }
